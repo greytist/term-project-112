@@ -25,10 +25,10 @@ https://www.youtube.com/watch?v=BgQdGA-rBc4&authuser=0
 
 How to run:
 
-The file you want to run is called " main_file.py ". Most of the code is in here, so it is one
+  The file you want to run is called " main_file.py ". Most of the code is in here, so it is one
 of the bigger files. After you run the main file, all you need to do is have fun.
 
 There are no external libraries.
 
-There are no shortcut commands. Each minigame comes up at least twice. Be careful not to 
+  There are no shortcut commands. Each minigame comes up at least twice. Be careful not to 
 click through the dialogue too fast or you could miss something. (just like in real life!)
