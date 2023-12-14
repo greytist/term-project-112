@@ -40,11 +40,10 @@ class Character:
 class Player:
     def __init__(self, name):
         self.name=name
-        self.smarts=10#get from studying/lose from skipping class
-        # self.hunger=100#100 is not hungry, fill by eating 
+        self.smarts=10#get from studying
 
     def __repr__(self):
-        return f'Player name = {self.name}, smarts={self.smarts}'#, hunger={self.hunger}'
+        return f'Player name = {self.name}, smarts={self.smarts}'
 
     def study(self, amountStudied):
         if isinstance(amountStudied, int):
@@ -86,7 +85,6 @@ class GameState():
     def changeState(newState):
         GameState.curGameState = newState
 
-#amalia told me to make a class for buttons (such good advice)
 class Button:
     def __init__(self, name, x, y, width, height, color, size, functionCall, *functionParameters):
         self.name = name
@@ -121,16 +119,16 @@ class Button:
 def loadCharacters(app):
     charlieExpressionSprites =\
         {
-            "happy":"charlieHappy.png",
-            "upset":"charlieUpset.png" 
+            "happy":"pictures/charlieHappy.png",
+            "upset":"pictures/charlieUpset.png" 
         }
     Charlie =  ["Charlie", charlieExpressionSprites]
     Character(Charlie)
 
     blakeExpressionSprites =\
         {
-            "happy":"blakeHappy.png",
-            "upset":"blakeUpset.png"
+            "happy":"pictures/blakeHappy.png",
+            "upset":"pictures/blakeUpset.png"
         } 
     Blake = ["Blake", blakeExpressionSprites]
     Character(Blake)
@@ -246,22 +244,22 @@ def loadLectureGame(app):
     app.currentCorrectAnswer = None
 
 def createCMUImages(app):
-    app.titlemage = CMUImage(Image.open("titleScreen.png"))
-    app.morningmage = CMUImage(Image.open("morningTime.png"))
-    app.daymage = CMUImage(Image.open("dayTime.png"))
-    app.nightmage = CMUImage(Image.open("nightTime.jpg"))
-    app.dormmage = CMUImage(Image.open("insideDorm.png"))
-    app.primmage = CMUImage(Image.open("laPrima.jpg"))
-    app.dohurty = CMUImage(Image.open("dohurty.jpg"))
-    app.abpmage = CMUImage(Image.open("abp.png"))
+    app.titlemage = CMUImage(Image.open("pictures/titleScreen.png"))
+    app.morningmage = CMUImage(Image.open("pictures/morningTime.png"))
+    app.daymage = CMUImage(Image.open("pictures/dayTime.png"))
+    app.nightmage = CMUImage(Image.open("pictures/nightTime.jpg"))
+    app.dormmage = CMUImage(Image.open("pictures/insideDorm.png"))
+    app.primmage = CMUImage(Image.open("pictures/laPrima.jpg"))
+    app.dohurty = CMUImage(Image.open("pictures/dohurty.jpg"))
+    app.abpmage = CMUImage(Image.open("pictures/abp.png"))
 
-    app.blakeHappy = CMUImage(Image.open("blakeHappy.png"))
-    app.blakeUpset = CMUImage(Image.open("blakeUpset.png"))
-    app.charlieHappy = CMUImage(Image.open("charlieHappy.png"))
-    app.charlieUpset = CMUImage(Image.open("charlieUpset.png"))
+    app.blakeHappy = CMUImage(Image.open("pictures/blakeHappy.png"))
+    app.blakeUpset = CMUImage(Image.open("pictures/blakeUpset.png"))
+    app.charlieHappy = CMUImage(Image.open("pictures/charlieHappy.png"))
+    app.charlieUpset = CMUImage(Image.open("pictures/charlieUpset.png"))
 
-    app.chair = CMUImage(Image.open("chair.png"))
-    app.coffeeCup = CMUImage(Image.open("coffeeCup.png"))
+    app.chair = CMUImage(Image.open("pictures/chair.png"))
+    app.coffeeCup = CMUImage(Image.open("pictures/coffeeCup.png"))
 
 def redrawAll(app):
     #draw current background
